@@ -1,0 +1,7 @@
+%%MatrixMarket matrix coordinate real general
+%
+% ATHENS course matrix
+%
+2025 2025 100015
+1    1    .9927
+1    2    .9388
