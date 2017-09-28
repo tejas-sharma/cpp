@@ -12,7 +12,7 @@ e2: e2.cpp
 	$(CC) -o e2 e2.cpp
 
 stack: stack.cpp
-	$(CC) $(CFLAGS) -o stack4 stack.cpp
+	$(CC) $(CFLAGS) -o stack stack.cpp
 
 e4: e4.cpp
 	$(CC) -o e4 e4.cpp
