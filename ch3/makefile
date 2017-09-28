@@ -11,7 +11,7 @@ e1: e1.cpp
 e2: e2.cpp
 	$(CC) -o e2 e2.cpp
 
-stack: stack.cpp
+stack: stack.cpp stack.tpp
 	$(CC) $(CFLAGS) -o stack stack.cpp
 
 e4: e4.cpp
