@@ -26,7 +26,11 @@ int main(int argc, char ** argv)
   }
   //cout << s.top() << endl;
   //cout << s.push(4) << endl;
-  s.clear();
-  cout << s.size() << endl;
+  auto s2 = std::move(s);
+  for (auto i : s2) 
+  {
+    cout << i << endl;
+  }
+
   return 0;
 }

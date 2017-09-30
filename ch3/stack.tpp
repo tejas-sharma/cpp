@@ -15,7 +15,6 @@ class Stack
   private:
     std::array<T, N> _data; 
     std::unique_ptr<size_t> _top;
-    bool _init;
     class StackIterator 
     {
       private:
@@ -32,6 +31,8 @@ class Stack
     using iterator = StackIterator;
     using const_iterator = const StackIterator;
     Stack();
+    Stack(Stack&& );
+    Stack& operator=(Stack&&);
     T& top();
     const T& top() const;
     bool pop();
@@ -49,6 +50,22 @@ class Stack
 template <class T, size_t N>
 Stack<T, N>::Stack() : _top(std::make_unique<size_t>(0))
 {
+}
+
+template <class T, size_t N>
+Stack<T, N>::Stack(Stack<T, N>&& other) : _top(std::move(other._top)), _data(std::move(other._data))
+{
+}
+
+template <class T, size_t N>
+Stack<T, N>& Stack<T, N>::operator=(Stack<T, N>&& other)
+{
+  if (this != &other)
+  {
+    _top = std::move(other._top);
+    _data = std::move(other._data);
+  }
+  return *this;
 }
 
 template<class T, size_t N>
