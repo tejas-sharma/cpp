@@ -26,11 +26,30 @@ int main(int argc, char ** argv)
   }
   //cout << s.top() << endl;
   //cout << s.push(4) << endl;
+  cout << "moving" << endl;
   auto s2 = std::move(s);
   for (auto i : s2) 
   {
     cout << i << endl;
   }
 
+  cout << "boolean specialization" << endl;
+
+  cout << endl;
+  Stack<bool, 10> s3;
+  s3.push(true);
+  s3.push(false);
+  s3.push(true);
+  s3.push(false);
+  s3.push(true);
+  s3.push(false);
+  s3.push(true);
+  s3.push(false);
+  s3.push(true);
+  s3.push(false);
+  for (auto b : s3) 
+  {
+    cout << b << endl;
+  }
   return 0;
 }

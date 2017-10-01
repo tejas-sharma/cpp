@@ -11,7 +11,7 @@ e1: e1.cpp
 e2: e2.cpp
 	$(CC) -o e2 e2.cpp
 
-stack: stack.cpp stack.tpp
+stack: stack.cpp stack.tpp stack_bool.tpp
 	$(CC) $(CFLAGS) -o stack stack.cpp
 
 odd_range: odd_range.cpp 

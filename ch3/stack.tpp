@@ -4,10 +4,6 @@
 #include <memory>
 #include <array>
 #include <stdexcept>
-template <class T>
-class StackIterator 
-{
-};
 
 template <class T, size_t N>
 class Stack
@@ -174,3 +170,4 @@ Stack<T, N>::StackIterator::StackIterator(Stack<T, N>* stack, size_t idx) : _sta
 {
 }
 
+#include "stack_bool.tpp"
