@@ -3,7 +3,7 @@ DEBUG = -g3 -ggdb
 CFLAGS = -Wall -w --std=c++14 $(DEBUG) 
 LFLAGS = -Wall -o 
 
-all: e1 e2 stack odd_range array_size
+all: e1 e2 stack odd_range array_size trapezoid
 
 e1: e1.cpp
 	$(CC) -o e1 e1.cpp
@@ -20,5 +20,8 @@ array_size: array_size.cpp
 odd_range: odd_range.cpp 
 	$(CC) $(CFLAGS) -o odd_range odd_range.cpp
 
+trapezoid: trapezoid.cpp 
+	$(CC) $(CFLAGS) -o trapezoid trapezoid.cpp
+
 clean:
-	\rm *.o e1 e2 stack odd_range array_size
+	\rm *.o e1 e2 stack odd_range array_size trapezoid
